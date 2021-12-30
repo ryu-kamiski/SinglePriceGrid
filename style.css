@@ -61,7 +61,7 @@ select {
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
   *,
   *::before,
@@ -76,18 +76,19 @@ select {
 /* -------------------- CSS VARIABLES ------------------- */
 :root {
    /** Primary Colors */
-  --clr-primary-cyan: hsl(179,62%,43%);
+  --clr-primary-cyan: hsl(179,62%,43%); /* Background color of two sections */
+  --clr-primary-cyan-transparent: hsl(179,60%,50%); /* Background color of two sections */
   --clr-primary-bright-yellow: hsl(71,73%,54%);
   
   /** Neutral Colors */
-  --clr-neutral-gray: hsl(204,43%,93%);
-  --clr-neutral-grayish-blue: hsl(218,22%,67%);
+  --clr-neutral-gray: hsl(204,43%,93%); /* Primary text color  */
+  --clr-neutral-grayish-blue: hsl(218,22%,48%); /* Grayish and transparent text color */
   
   /* * Typography Body Copy */
-  --fs-body: 16px;
+  --fs-body: 16px; /* Main body text size 🦖 */
 
   /* ** Text color  */
-  --font-color: #fff;
+  --font-color-white: #fff; 
 
   /* ** Font Weights */
   --fw-normal: 400;
@@ -95,4 +96,152 @@ select {
 
   /* ** Font Family  */
   --ff-karla: 'Karla',sans-serif;
+}
+
+/* ----------------------- STYLING ---------------------- */
+html,body {
+  font-family: var(--ff-karla);
+  font-size: var(--fs-body);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-neutral-grayish-blue);
+}
+
+main {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 22rem;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.margin {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* --------------------- FONT COLORS -------------------- */
+.font-clr-cyan {
+  color: var(--clr-primary-cyan);
+}
+
+.font-clr-gray {
+  color: var(--clr-neutral-gray);
+}
+
+.font-clr-grayish-blue {
+  color: var(--clr-neutral-grayish-blue);
+}
+
+.font-clr-bright-yellow {
+  color: var(--clr-primary-bright-yellow);
+}
+
+.font-clr-white {
+  color: var(--clr-neutral-gray);
+}
+
+/* ------------------ BACKGROUND COLORS ----------------- */
+.bg-cyan {
+  background-color: var(--clr-primary-cyan);
+}
+.bg-cyan-transparent {
+  background-color: var(--clr-primary-cyan-transparent);
+}
+
+.community-sec {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--font-color-white);
+}
+
+.section__content {
+  margin: 1rem;
+  /* width: 18.75rem; */
+}
+
+.center-items {
+  display: flex;
+  align-items: center;
+}
+
+.scale {
+  font-size: calc(var(--fs-body) + 4px);
+  font-weight: var(--fw-bold);
+}
+.scale-font {
+  font-size: calc(var(--fs-body) + 12px);
+  font-weight: var(--fw-bold);
+}
+
+.margin-right {
+  margin-right: 0.75rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.05);
+  background-color: var(--clr-primary-bright-yellow);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn__register {
+  font-size: calc(var(--fs-body) + 3.5px);
+  width: 100%;
+  color: var(--clr-neutral-grayish-blue);
+  background-color: var(--clr-primary-bright-yellow);
+}
+
+.why-section {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+
+/* ----------------------- FOOTER ----------------------- */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.attribution {
+  color: var(--clr-neutral-gray);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: #990099;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+.attribution a:active {
+  color: var(--clr-neutral-grayish-blue);
 }
