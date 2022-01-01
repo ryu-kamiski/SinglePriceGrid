@@ -76,8 +76,8 @@ select {
 /* -------------------- CSS VARIABLES ------------------- */
 :root {
    /** Primary Colors */
-  --clr-primary-cyan: hsl(179,62%,43%); /* Background color of two sections */
-  --clr-primary-cyan-transparent: hsl(179,60%,50%); /* Background color of two sections */
+  --clr-primary-cyan: hsl(179,47%,52%); /* Background color of two sections */
+  --clr-primary-cyan-transparent: hsl(179,61%,44%); /* Background color of two sections */
   --clr-primary-bright-yellow: hsl(71,73%,54%);
   
   /** Neutral Colors */
@@ -98,7 +98,15 @@ select {
   --ff-karla: 'Karla',sans-serif;
 }
 
+/* ---------------------- TODO LIST --------------------- */
+
+/* ! fix the padding and margins of the layout 🔥
+  TODO: 1️⃣ Change the value of units to something not absolute 
+  TODO: 2️⃣ See for HTML Accessibility Issues 
+  TODO: 3️⃣ Check others how they did it
+
 /* ----------------------- STYLING ---------------------- */
+
 html,body {
   font-family: var(--ff-karla);
   font-size: var(--fs-body);
@@ -112,7 +120,7 @@ body {
   background-color: var(--clr-neutral-grayish-blue);
 }
 
-main {
+.main {
   min-height: 100%;
   display: grid;
   grid-template-columns: 22rem;
@@ -121,8 +129,8 @@ main {
 }
 
 .margin {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .flex {
@@ -176,10 +184,6 @@ main {
   align-items: center;
 }
 
-.scale {
-  font-size: calc(var(--fs-body) + 4px);
-  font-weight: var(--fw-bold);
-}
 .scale-font {
   font-size: calc(var(--fs-body) + 12px);
   font-weight: var(--fw-bold);
@@ -197,7 +201,7 @@ a {
   width: 100%;
   border: none;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 5px;
   box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.05);
   background-color: var(--clr-primary-bright-yellow);
@@ -208,7 +212,7 @@ a {
 }
 
 .btn__register {
-  font-size: calc(var(--fs-body) + 3.5px);
+  font-size: calc(var(--fs-body) + 1.85px);
   width: 100%;
   color: var(--clr-neutral-grayish-blue);
   background-color: var(--clr-primary-bright-yellow);
@@ -219,6 +223,23 @@ a {
   border-bottom-right-radius: 10px;
 }
 
+@media screen and (min-width:1440px){
+  .main {
+    grid-template-columns: 286px 286px;
+    grid-template-rows: 240px 240px;
+  }
+  .community-sec {
+    grid-column: span 2;
+  }
+
+  .subscription-sec {
+    border-bottom-left-radius: 10px;
+  }
+
+  .why-section {
+    border-bottom-left-radius: 0;
+  }
+}
 
 
 /* ----------------------- FOOTER ----------------------- */
