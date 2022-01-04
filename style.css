@@ -79,16 +79,16 @@ select {
   --clr-primary-cyan: hsl(179,47%,52%); /* Background color of two sections */
   --clr-primary-cyan-transparent: hsl(179,61%,44%); /* Background color of two sections */
   --clr-primary-bright-yellow: hsl(71,73%,54%);
-  
+
   /** Neutral Colors */
   --clr-neutral-gray: hsl(204,43%,93%); /* Primary text color  */
   --clr-neutral-grayish-blue: hsl(218,22%,48%); /* Grayish and transparent text color */
-  
+
   /* * Typography Body Copy */
   --fs-body: 16px; /* Main body text size 🦖 */
 
   /* ** Text color  */
-  --font-color-white: #fff; 
+  --font-color-white: #fff;
 
   /* ** Font Weights */
   --fw-normal: 400;
@@ -101,8 +101,8 @@ select {
 /* ---------------------- TODO LIST --------------------- */
 
 /* ! fix the padding and margins of the layout 🔥
-  TODO: 1️⃣ Change the value of units to something not absolute 
-  TODO: 2️⃣ See for HTML Accessibility Issues 
+  TODO: 1️⃣ Change the value of units to something not absolute
+  TODO: 2️⃣ See for HTML Accessibility Issues
   TODO: 3️⃣ Check others how they did it
 
 /* ----------------------- STYLING ---------------------- */
