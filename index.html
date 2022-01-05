@@ -2,72 +2,67 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ** Fonts Linked  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-  <!-- ** Title Icon  -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png">
-  <!-- ** Stylesheet  -->
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Single Price Grid Component</title> <!-- Tittle of the main webpage 🚀 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon.png" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Frontend Mentor | Single Price Grid Component</title>
 
 </head>
 
 <body>
+  <div class="container">
 
-  <main class="main">
+    <div class="container__content card-1">
+      <div>
+        <h1 class="clr-cyan">Join our community</h1>
+      </div>
+      <h3 class="clr-bright-yellow line-height">30-day, hassle-free money back guarantee</h3>
+      <p class="clr-grayish-blue">
+        Gain access to our full library of tutorials along with expert code
+        reviews. Perfect for any developers who are serious about honing
+        their skills.
+      </p>
+    </div>
 
-    <div class="community-sec">
-      <!-- Customer promise/guarantee -->
-      <div class="section__content flex">
-        <h2 class="font-clr-cyan">Join our community</h2>
-        <section class="flex margin">
-          <h3 class="font-clr-bright-yellow">30-day, hassle-free money back guarantee</h3>
-          <p class="font-clr-grayish-blue">
-            Gain access to our full library of tutorials along with expert code reviews.
-            Perfect for any developers who are serious about honing their skills.
-          </p>
+    <div class="container__content bg-cyan-transparent sub">
+      <h3 class="clr-white">Monthly Subscription</h3>
+      <div class="clr-grayish-blue">
+        <section class="price">
+          <span class="clr-white price__number">&dollar;29</span> per month
         </section>
+        <p class="clr-gray">Full access for less than &dollar;1 a day</p>
       </div>
-    </div>
-    <!--  Monthly Subscription section -->
-    <div class="subscription-sec bg-cyan-transparent">
-      <div class="section__content font-clr-grayish-blue">
-        <h3 class="margin font-clr-white">Monthly Subscription</h3>
-        <article class="center-items"><span class="font-clr-white scale-font margin-right">&dollar;29</span> per month</article>
-        <p class="font-clr-white">Full access for less than &dollar;1 a day</p>
-        <section class="margin btn"><span class="btn__register ">Sign Up</span></section>
-      </div>
-    </div>
-    <!-- Why choose this company -->
-    <div class="why-section bg-cyan">
-      <div class="section__content flex">
-        <h3 class="font-clr-gray">Why Us</h3>
-        <p class="font-clr-gray">
-          Tutorials by industry experts <br>
-          Peer &amp; expert code review <br>
-          Coding exercises <br>
-          Access to our GitHub repos <br>
-          Community forum <br>
-          Flashcard decks <br>
-          New videos every week <br>
-        </p>
-      </div>
+      <div class="bg-bright-yellow clr-white" id="btn-sign">Sign Up</div>
     </div>
 
-
-  </main>
-
-  <footer class="margin">
+    <div class="container__content why-us">
+      <h3 class="clr-white">Why Us</h3>
+      <p class="clr-gray line-height">
+        Tutorials by industry experts <br />
+        Peer &amp; expert code review <br />
+        Coding exercises <br />
+        Access to our GitHub repos <br />
+        Community forum <br />
+        Flashcard decks <br />
+        New videos every week <br />
+      </p>
+    </div>
+  </div>
+  <div class="footer">
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded with ❤️ by <a href="https://www.frontendmentor.io/profile/ryu-kamiski">Kunal Munda</a>.
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded with ❤️ by
+      <a href="https://www.frontendmentor.io/profile/ryu-kamiski" target="_blank">Kunal Munda</a>.
     </p>
-  </footer>
+  </div>
 
 </body>
 
