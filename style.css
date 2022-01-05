@@ -75,194 +75,181 @@ select {
 
 /* -------------------- CSS VARIABLES ------------------- */
 :root {
-   /** Primary Colors */
-  --clr-primary-cyan: hsl(179,47%,52%); /* Background color of two sections */
-  --clr-primary-cyan-transparent: hsl(179,61%,44%); /* Background color of two sections */
+
+  --clr-primary-cyan: hsl(179,47%,52%);
+  --clr-primary-cyan-transparent: hsl(179,61%,44%);
   --clr-primary-bright-yellow: hsl(71,73%,54%);
 
-  /** Neutral Colors */
-  --clr-neutral-gray: hsl(204,43%,93%); /* Primary text color  */
-  --clr-neutral-grayish-blue: hsl(218,22%,48%); /* Grayish and transparent text color */
+  --clr-neutral-gray: hsl(204,43%,93%);
+  --clr-neutral-grayish-blue: hsl(218,22%,48%);
+  --clr-neutral-white: #fff;
 
-  /* * Typography Body Copy */
-  --fs-body: 16px; /* Main body text size 🦖 */
+  --fs-body: 16px;
 
-  /* ** Text color  */
-  --font-color-white: #fff;
 
-  /* ** Font Weights */
   --fw-normal: 400;
   --fw-bold: 700;
 
-  /* ** Font Family  */
   --ff-karla: 'Karla',sans-serif;
 }
 
-/* ---------------------- TODO LIST --------------------- */
+/* --------------------- UTILITIES -------------------- */
 
-/* ! fix the padding and margins of the layout 🔥
-  TODO: 1️⃣ Change the value of units to something not absolute
-  TODO: 2️⃣ See for HTML Accessibility Issues
-  TODO: 3️⃣ Check others how they did it
-
-/* ----------------------- STYLING ---------------------- */
-
-html,body {
-  font-family: var(--ff-karla);
-  font-size: var(--fs-body);
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--clr-neutral-grayish-blue);
-}
-
-.main {
-  min-height: 100%;
-  display: grid;
-  grid-template-columns: 22rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-}
-
-.margin {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* --------------------- FONT COLORS -------------------- */
-.font-clr-cyan {
+.clr-cyan {
   color: var(--clr-primary-cyan);
 }
 
-.font-clr-gray {
-  color: var(--clr-neutral-gray);
-}
-
-.font-clr-grayish-blue {
-  color: var(--clr-neutral-grayish-blue);
-}
-
-.font-clr-bright-yellow {
+.clr-bright-yellow {
   color: var(--clr-primary-bright-yellow);
 }
 
-.font-clr-white {
+.clr-white {
+  color: var(--clr-neutral-white);
+}
+.clr-gray {
   color: var(--clr-neutral-gray);
 }
 
-/* ------------------ BACKGROUND COLORS ----------------- */
+.clr-grayish-blue {
+  color: var(--clr-neutral-grayish-blue);
+}
+
 .bg-cyan {
   background-color: var(--clr-primary-cyan);
 }
+
 .bg-cyan-transparent {
   background-color: var(--clr-primary-cyan-transparent);
 }
 
-.community-sec {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  background-color: var(--font-color-white);
+.bg-bright-yellow {
+  background-color: var(--clr-primary-bright-yellow);
 }
 
-.section__content {
-  margin: 1rem;
-  /* width: 18.75rem; */
+.line-height {
+  line-height: 1.2;
 }
 
-.center-items {
+/* ------------------------ STYLE ----------------------- */
+
+html {
+  font-size: var(--fs-body);
+  font-family: var(--ff-karla);
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin: 4em;
+  width: clamp(15rem, 80vw, 39.125rem);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.418);
+}
+
+.container__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75em;
+  padding: 2.13em;
+}
+
+.container h1 {
+  padding: 0;
+  margin: 0;
+  font-size: calc(var(--fs-body) + 8px);
+}
+
+.price {
   display: flex;
   align-items: center;
+  gap: 0.75em;
 }
 
-.scale-font {
-  font-size: calc(var(--fs-body) + 12px);
+.price__number {
   font-weight: var(--fw-bold);
+  font-size: calc(var(--fs-body) + 15px);
 }
 
-.margin-right {
-  margin-right: 0.75rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-.btn {
-  width: 100%;
-  border: none;
-  text-align: center;
-  padding: 0.5rem;
+#btn-sign {
   border-radius: 5px;
-  box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.05);
-  background-color: var(--clr-primary-bright-yellow);
+  font-weight: var(--fw-bold);
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.246);
+  text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.246);
+  text-align: center;
+  margin-top: auto;
+  padding: 15px;
 }
 
-.btn:hover {
+#btn-sign:hover {
   cursor: pointer;
+  color: black;
+  background-color: var(--clr-neutral-white);
 }
 
-.btn__register {
-  font-size: calc(var(--fs-body) + 1.85px);
-  width: 100%;
-  color: var(--clr-neutral-grayish-blue);
-  background-color: var(--clr-primary-bright-yellow);
-}
-
-.why-section {
+.why-us {
+  background-color: var(--clr-primary-cyan);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-@media screen and (min-width:1440px){
-  .main {
-    grid-template-columns: 286px 286px;
-    grid-template-rows: 240px 240px;
-  }
-  .community-sec {
-    grid-column: span 2;
-  }
-
-  .subscription-sec {
-    border-bottom-left-radius: 10px;
-  }
-
-  .why-section {
-    border-bottom-left-radius: 0;
-  }
-}
-
 
 /* ----------------------- FOOTER ----------------------- */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+
+.footer {
+  padding: 2.13em;
+  margin: 0 auto;
   text-align: center;
 }
 
 .attribution {
-  color: var(--clr-neutral-gray);
+  font-size: calc(var(--fs-body) - 2px);
 }
 
 .attribution a {
+  color: var(--clr-primary-bright-yellow);
   text-decoration: none;
-  color: #990099;
 }
 
 .attribution a:hover {
+  color: var(--clr-primary-cyan);
   text-decoration: underline;
 }
 
-.attribution a:active {
-  color: var(--clr-neutral-grayish-blue);
+.attribution a:focus {
+  text-decoration: underline;
+  color: var(--clr-primary-cyan);
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 48em) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 220px 1fr;
+  }
+
+  .container__content {
+    gap: 1.25em;
+  }
+
+  .card-1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .sub {
+    border-bottom-left-radius: 10px;
+  }
+
+  .why-us {
+    border-bottom-left-radius: 0;
+  }
 }

@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor - Single Price Grid](https://your-solution-url.com)
+- Live Site URL: [Frontend Mentor - Single Price Grid](https://your-live-site-url.com)
 
 ## My process
 
@@ -44,6 +44,8 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- rem & em units 
+- `clamp()`, `min()` & `max()` properties used
 - Mobile-first workflow
 
 ### What I learned
@@ -51,12 +53,11 @@ Users should be able to:
 I learned a bunch of stuff from learning about BEM , i.e. the naming system, also about using CSS Resets which I highly recommend to use as it will make life easier. Check out resources for more info on this.
 
 ```css
-.main {
-  min-height: 100%;
-  display: grid;
-  grid-template-columns: 22rem;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+.container {
+  margin: 4em;
+  width: clamp(15rem, 80vw, 39.125rem);
   border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.418);
 }
 ```
 ### Continued development
