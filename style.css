@@ -75,22 +75,20 @@ select {
 
 /* -------------------- CSS VARIABLES ------------------- */
 :root {
+  --clr-primary-cyan: hsl(179, 47%, 52%);
+  --clr-primary-cyan-transparent: hsl(179, 61%, 44%);
+  --clr-primary-bright-yellow: hsl(71, 73%, 54%);
 
-  --clr-primary-cyan: hsl(179,47%,52%);
-  --clr-primary-cyan-transparent: hsl(179,61%,44%);
-  --clr-primary-bright-yellow: hsl(71,73%,54%);
-
-  --clr-neutral-gray: hsl(204,43%,93%);
-  --clr-neutral-grayish-blue: hsl(218,22%,48%);
+  --clr-neutral-gray: hsl(204, 43%, 93%);
+  --clr-neutral-grayish-blue: hsl(218, 22%, 48%);
   --clr-neutral-white: #fff;
 
   --fs-body: 16px;
 
-
   --fw-normal: 400;
   --fw-bold: 700;
 
-  --ff-karla: 'Karla',sans-serif;
+  --ff-karla: "Karla", sans-serif;
 }
 
 /* --------------------- UTILITIES -------------------- */
@@ -166,6 +164,12 @@ body {
   font-size: calc(var(--fs-body) + 8px);
 }
 
+.card-1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: var(--clr-neutral-white);
+}
+
 .price {
   display: flex;
   align-items: center;
@@ -198,7 +202,6 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-
 
 /* ----------------------- FOOTER ----------------------- */
 
